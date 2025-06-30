@@ -55,6 +55,12 @@ export async function saveUserToDB(user: {
 
 export async function signInAccount(user: { email: string; password: string }) {
   try {
+    await account.deleteSession('current');
+  } catch (error) {
+    console.log(error);
+  }
+
+  try {
     const session = await account.createEmailPasswordSession(
       user.email,
       user.password
@@ -65,12 +71,11 @@ export async function signInAccount(user: { email: string; password: string }) {
     console.log(error);
   }
 }
-
 export async function getCurrentUser() {
   try {
     const currentAccount = await account.get();
 
-    if (!currentAccount) throw Error;
+    if (!currentAccount) return null;
 
     const currentUser = await databases.listDocuments(
       appwriteConfig.databaseId,
@@ -78,10 +83,11 @@ export async function getCurrentUser() {
       [Query.equal('accountId', currentAccount.$id)]
     );
 
-    if (!currentUser) throw Error;
+    if (!currentUser || currentUser.documents.length === 0) return null;
 
     return currentUser.documents[0];
   } catch (error) {
-    console.log(error);
+    console.log('Korisnik nije ulogovan ili je došlo do greške:', error);
+    return null;
   }
 }

@@ -18,7 +18,6 @@ import { Button } from '@/components/ui/button';
 import { signinValidation } from '@/lib/validation';
 import { Loader } from 'lucide-react';
 import { useSignInAccount } from '@/lib/tanstack-query/queriesAndMutations';
-import { signInAccount } from '@/lib/appwrite/api';
 import { useUserContext } from '@/context/AuthContext';
 
 const SignInForm = () => {
@@ -46,7 +45,7 @@ const SignInForm = () => {
 
     if (!session) {
       return toast({
-        title: 'Sign Up failed. Please try again',
+        title: 'Sign In failed. Please try again1',
       });
     }
 
@@ -58,7 +57,7 @@ const SignInForm = () => {
       navigate('/');
     } else {
       return toast({
-        title: 'Sign Up failed. Please try again',
+        title: 'Sign Up failed. Please try again2',
       });
     }
   }
