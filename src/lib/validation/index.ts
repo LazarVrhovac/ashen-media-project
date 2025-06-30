@@ -8,3 +8,10 @@ export const signupValidation = z.object({
     .string()
     .min(8, { message: 'Password should have 8 characthers' }),
 });
+
+export const signinValidation = z.object({
+  email: z.string().email(),
+  password: z
+    .string()
+    .min(8, { message: 'Password should have 8 characthers' }),
+});

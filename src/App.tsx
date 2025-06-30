@@ -7,6 +7,8 @@ import SignUpForm from './_auth/forms/SignUpForm';
 import AuthFormLayout from './_auth/AuthFormLayout';
 import './globals.css';
 
+import { Toaster } from '@/components/ui/toaster';
+
 const App = () => {
   return (
     <main className='flex h-screen'>
@@ -22,6 +24,8 @@ const App = () => {
           <Route index element={<Home />} />
         </Route>
       </Routes>
+
+      <Toaster />
     </main>
   );
 };
