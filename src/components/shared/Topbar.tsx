@@ -28,7 +28,7 @@ const Topbar = () => {
           <Button
             variant='ghost'
             className='shad-button_ghost'
-            onClick={() => signOut}
+            onClick={() => signOut()}
           >
             <img src='/assets/icons/logout.png' alt='logout' />
           </Button>

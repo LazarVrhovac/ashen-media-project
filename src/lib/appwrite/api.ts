@@ -2,7 +2,6 @@ import { ID, Query } from 'appwrite';
 
 import type { INewUser } from '@/types';
 import { account, appwriteConfig, avatars, databases } from './config';
-// import type { URL } from 'url';
 
 export async function createNewUserAcc(user: INewUser) {
   try {
