@@ -1,4 +1,5 @@
 import Loader1 from '@/components/shared/Loader1';
+import PostCard from '@/components/shared/PostCard';
 import { useGetRecentPosts } from '@/lib/tanstack-query/queriesAndMutations';
 import type { Models } from 'appwrite';
 
@@ -19,7 +20,7 @@ const Home = () => {
           ) : (
             <ul className='flex flex-col flex-1 gap-9 w-full'>
               {posts?.documents.map((post: Models.Document) => (
-                <li>{post.caption}</li>
+                <PostCard post={post} key={post.caption} />
               ))}
             </ul>
           )}

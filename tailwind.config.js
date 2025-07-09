@@ -30,8 +30,8 @@ module.exports = {
         'dark-4': '#1F1F22',
         'light-1': '#FFFFFF',
         'light-2': '#EFEFEF',
-        'light-3': '#7878A3',
-        'light-4': '#7FD545',
+        'light-3': '#2F4F4F', //maslinasta
+        'light-4': '#7FD545', //svetlo zelena
       },
       screens: {
         xs: '480px',
