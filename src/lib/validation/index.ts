@@ -15,3 +15,10 @@ export const signinValidation = z.object({
     .string()
     .min(8, { message: 'Password should have 8 characthers' }),
 });
+
+export const PostValidation = z.object({
+  caption: z.string().min(5).max(2200),
+  file: z.custom<File[]>(),
+  location: z.string().min(2).max(85),
+  tags: z.string(),
+});
