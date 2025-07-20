@@ -267,7 +267,7 @@ export async function getPostById(postId: string) {
 
     return post;
   } catch (error) {
-    console.log(error);
+    console.log('Failed to get post:', error);
   }
 }
 
