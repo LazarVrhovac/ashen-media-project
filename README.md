@@ -7,35 +7,54 @@ The app's primary purpose is to connect users around the world through intuitive
 
 Ashen allows users to:
 
-Create and customize personal profiles
+- Create and customize personal profiles
 
-Post content with images
+- Post content with images
 
-Like and comment on other users’ posts
+- Like other users’ posts
 
-Follow other users
+- Manage their own content and interactions
 
-Manage their own content and interactions
-
-The focus is on delivering a smooth, fast, and clean user experience.
+- The focus is on delivering a smooth, fast, and clean user experience.
 
 ## Technologies Used
 
-The development of Ashen was powered by the following technologies and libraries:
+- React (with libraries such as react-dropzone, react-dom, etc.)
 
-React (with libraries such as react-dropzone, react-dom, etc.)
+- TypeScript – for static typing and safer code
 
-TypeScript – for static typing and safer code
+- AppWrite – for user authentication, database, storage, and backend logic
 
-AppWrite – for user authentication, database, storage, and backend logic
+- TanStack Query (React Query) – for server-state management and data fetching
 
-TanStack Query (React Query) – for server-state management and data fetching
+- Tailwind CSS – for utility-first and responsive styling
 
-Tailwind CSS – for utility-first and responsive styling
+- ShadCN/UI – for clean, reusable UI components
 
-ShadCN/UI – for clean, reusable UI components
+- - Various additional helper libraries (e.g., Zod, Lucide Icons, Framer Motion...)
 
-various additional helper libraries (e.g., Zod, Lucide Icons, Framer Motion...)
+## Project Structure
+
+```
+ashen/
+├── public/                # Static files (e.g. images, favicon)
+├── src/                   # Main application source code
+│   ├── _auth/             # Authentication logic (login, register, etc.)
+│   ├── _root/             # Root layout and app structure
+│   ├── components/        # Reusable UI components (buttons, cards, etc.)
+│   ├── constants/         # Constants (routes, messages, config)
+│   ├── context/           # React context providers (e.g. AuthContext)
+│   ├── hooks/             # Custom React hooks
+│   ├── lib/               # Utilities and external services (Appwrite, validation, etc.)
+│   └── types/             # Global TypeScript types and interfaces
+```
+
+## 🔧 Key Project Files
+
+- `src/context/AuthContext.tsx` – Provides authentication state and methods (e.g. login, logout) via React Context to be used across the app.
+- `src/lib/validation/utils.ts` – Contains utility functions for validating form inputs and user data before submission.
+- `src/lib/appwrite/api.ts` – Defines API functions that interact with the Appwrite backend (e.g. fetching data, creating or deleting records).
+- `src/lib/tanstack-query/queriesAndMutations.ts` – Centralizes all TanStack Query definitions — including data fetching (queries) and data-changing logic (mutations).
 
 ## Special Thanks
 
