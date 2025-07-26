@@ -1,69 +1,42 @@
-# React + TypeScript + Vite
+# Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ashen is a modern social networking application developed as the creator’s first major project. The name "Ashen" begins with the letter A, chosen symbolically to represent a fresh beginning and ambition for this to be the first in a series of impactful applications.
+The app's primary purpose is to connect users around the world through intuitive design, real-time interaction, and modern web technologies.
 
-Currently, two official plugins are available:
+## What the App Does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ashen allows users to:
 
-## Expanding the ESLint configuration
+Create and customize personal profiles
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Post content with images
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Like and comment on other users’ posts
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Follow other users
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Manage their own content and interactions
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The focus is on delivering a smooth, fast, and clean user experience.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Technologies Used
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The development of Ashen was powered by the following technologies and libraries:
+
+React (with libraries such as react-dropzone, react-dom, etc.)
+
+TypeScript – for static typing and safer code
+
+AppWrite – for user authentication, database, storage, and backend logic
+
+TanStack Query (React Query) – for server-state management and data fetching
+
+Tailwind CSS – for utility-first and responsive styling
+
+ShadCN/UI – for clean, reusable UI components
+
+various additional helper libraries (e.g., Zod, Lucide Icons, Framer Motion...)
+
+## Special Thanks
+
+A special thank you to my mentor Igor Ostojić, whose guidance, knowledge, and support were essential throughout the development of this project.

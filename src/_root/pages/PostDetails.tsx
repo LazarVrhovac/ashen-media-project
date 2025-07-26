@@ -2,17 +2,26 @@ import Loader1 from '@/components/shared/Loader1';
 import PostStats from '@/components/shared/PostStats';
 import { Button } from '@/components/ui/button';
 import { useUserContext } from '@/context/AuthContext';
-import { useGetPostById } from '@/lib/tanstack-query/queriesAndMutations';
+import {
+  useDeletePost,
+  useGetPostById,
+} from '@/lib/tanstack-query/queriesAndMutations';
 import { formatDate } from '@/lib/utils';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const PostDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
-  console.log('Loaded ID:', id);
-  const { data: post, isPending } = useGetPostById(id || '');
   const { user } = useUserContext();
 
-  const handleDeletePost = () => {};
+  const { data: post, isPending } = useGetPostById(id || '');
+
+  const { mutate: deletePost } = useDeletePost();
+
+  const handleDeletePost = () => {
+    deletePost({ postId: id || '', imageId: post?.imageId });
+    navigate(-1);
+  };
 
   return (
     <div className='post_details-container'>
