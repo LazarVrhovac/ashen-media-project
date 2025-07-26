@@ -21,18 +21,16 @@ import {
   useCreateUserAccount,
   useSignInAccount,
 } from '@/lib/tanstack-query/queriesAndMutations';
-import { signInAccount } from '@/lib/appwrite/api';
 import { useUserContext } from '@/context/AuthContext';
 
 const SignUpForm = () => {
   const { toast } = useToast();
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
   const navigate = useNavigate();
 
   const { mutateAsync: createNewUserAcc, isPending: isCreatingUser } =
     useCreateUserAccount();
-  const { mutateAsync: signInAccount, isPending: isSigningIn } =
-    useSignInAccount();
+  const { mutateAsync: signInAccount } = useSignInAccount();
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof signupValidation>>({

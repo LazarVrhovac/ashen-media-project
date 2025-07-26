@@ -4,11 +4,7 @@ import { useGetRecentPosts } from '@/lib/tanstack-query/queriesAndMutations';
 import type { Models } from 'appwrite';
 
 const Home = () => {
-  const {
-    data: posts,
-    isPending: isPostLoading,
-    isError: isErrorPosts,
-  } = useGetRecentPosts();
+  const { data: posts, isPending: isPostLoading } = useGetRecentPosts();
 
   return (
     <div className='flex flex-1'>
