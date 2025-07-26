@@ -2,6 +2,7 @@
 
 Ashen is a modern social networking application developed as the creator’s first major project. The name "Ashen" begins with the letter A, chosen symbolically to represent a fresh beginning and ambition for this to be the first in a series of impactful applications.
 The app's primary purpose is to connect users around the world through intuitive design, real-time interaction, and modern web technologies.
+This project was developed as part of the final exam requirements at the CODE by Comtrade school.
 
 ## What the App Does
 
