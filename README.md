@@ -86,6 +86,13 @@ npm run dev
 
 Visit [http://localhost:5173](http://localhost:5173) in your browser to use the application.
 
+## 🌐 Live Version
+
+If the hosted version is online, you can access the app here:  
+🔗 [https://ashenmedia.netlify.app/](https://ashenmedia.netlify.app/)
+
+> ⚠️ **Note:** The live version may not always reflect the most recent updates available on GitHub.
+
 ## 🔧 Key Project Files
 
 - `src/context/AuthContext.tsx` – Provides authentication state and methods (e.g. login, logout) via React Context to be used across the app.
