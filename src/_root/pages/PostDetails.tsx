@@ -4,22 +4,34 @@ import { Button } from '@/components/ui/button';
 import { useUserContext } from '@/context/AuthContext';
 import {
   useDeletePost,
+  useDeleteSavedPost,
+  useGetCurrentUser,
   useGetPostById,
 } from '@/lib/tanstack-query/queriesAndMutations';
 import { formatDate } from '@/lib/utils';
+import type { Models } from 'appwrite';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const PostDetails = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const { user } = useUserContext();
+  const { data: currentUser } = useGetCurrentUser();
 
   const { data: post, isPending } = useGetPostById(id || '');
+
+  const savedPostRecord = currentUser?.save.find(
+    (record: Models.Document) => record.post.$id === post?.$id
+  );
+
+  const { mutate: deleteSavedPost } = useDeleteSavedPost();
 
   const { mutate: deletePost } = useDeletePost();
 
   const handleDeletePost = () => {
+    deleteSavedPost(savedPostRecord.$id);
     deletePost({ postId: id || '', imageId: post?.imageId });
+
     navigate(-1);
   };
 
