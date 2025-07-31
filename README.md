@@ -50,8 +50,6 @@ ashen/
 │   └── types/             # Global TypeScript types and interfaces
 ```
 
-## 🔧 Key Project Files
-
 ## ▶️ How to Run the App
 
 To run Ashen locally on your machine, follow these simple steps:
@@ -87,6 +85,8 @@ npm run dev
 ```
 
 Visit [http://localhost:5173](http://localhost:5173) in your browser to use the application.
+
+## 🔧 Key Project Files
 
 - `src/context/AuthContext.tsx` – Provides authentication state and methods (e.g. login, logout) via React Context to be used across the app.
 - `src/lib/validation/utils.ts` – Contains utility functions for validating form inputs and user data before submission.
