@@ -52,6 +52,42 @@ ashen/
 
 ## 🔧 Key Project Files
 
+## ▶️ How to Run the App
+
+To run Ashen locally on your machine, follow these simple steps:
+
+### 1. Clone the Repository
+First, download (clone) the project using Git:
+```bash
+git clone https://github.com/your-username/ashen.git
+cd ashen
+```
+
+### 2. Install Dependencies
+Open your terminal (command line) inside the project folder and run:
+```bash
+npm install
+```
+> This will install all necessary packages used in the project.
+
+### 3. Set Up Environment Variables
+Create a `.env` file in the root directory and add the required Appwrite configuration:
+
+```env
+VITE_APPWRITE_ENDPOINT=https://your-appwrite-endpoint.com/v1
+VITE_APPWRITE_PROJECT_ID=your-project-id
+VITE_APPWRITE_DATABASE_ID=your-database-id
+VITE_APPWRITE_COLLECTION_ID=your-collection-id
+```
+
+### 4. Start the Development Server
+Once everything is set up, start the app with:
+```bash
+npm run dev
+```
+
+Visit [http://localhost:5173](http://localhost:5173) in your browser to use the application.
+
 - `src/context/AuthContext.tsx` – Provides authentication state and methods (e.g. login, logout) via React Context to be used across the app.
 - `src/lib/validation/utils.ts` – Contains utility functions for validating form inputs and user data before submission.
 - `src/lib/appwrite/api.ts` – Defines API functions that interact with the Appwrite backend (e.g. fetching data, creating or deleting records).
