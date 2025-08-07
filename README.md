@@ -8,13 +8,17 @@ This project was developed as part of the final exam requirements at the CODE by
 
 Ashen allows users to:
 
-- Create and customize personal profiles
+- Authentication (Login/Register)
 
-- Post content with images
+- Create and customize personal profiles (
 
-- Like other users’ posts
+- Post content with images(Caption, Tags, Locations)
+
+- Like and save other users’ posts
 
 - Manage their own content and interactions
+
+- Finding other people and posts
 
 - The focus is on delivering a smooth, fast, and clean user experience.
 
@@ -98,7 +102,13 @@ If the hosted version is online, you can access the app here:
 - `src/context/AuthContext.tsx` – Provides authentication state and methods (e.g. login, logout) via React Context to be used across the app.
 - `src/lib/validation/utils.ts` – Contains utility functions for validating form inputs and user data before submission.
 - `src/lib/appwrite/api.ts` – Defines API functions that interact with the Appwrite backend (e.g. fetching data, creating or deleting records).
-- `src/lib/tanstack-query/queriesAndMutations.ts` – Centralizes all TanStack Query definitions — including data fetching (queries) and data-changing logic (mutations).
+- `src/lib/tanstack-query/queriesAndMutations.ts` – Centralizes all TanStack Query definitions — including data fetching (queries) and data-changing logic (mutations
+
+## Screenshot of home page
+
+<img width="1908" height="889" alt="image" src="https://github.com/user-attachments/assets/f08e7246-d85e-440f-9737-e6da09e846b2" />
+
+
 
 ## Special Thanks
 
